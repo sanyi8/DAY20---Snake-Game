@@ -37,5 +37,4 @@ while game_is_on:
     segments[0].forward(20)
 
 
-
 screen.exitonclick()
