@@ -8,17 +8,17 @@ screen.bgcolor("black")
 screen.title("My Snake Game")
 screen.tracer(0)
 
+# create new object
 # use Snake() class from another file
 snake = Snake() # store instance from Class()
 
 game_is_on = True
 while game_is_on:
     screen.update()
-    time.sleep(0.1)
+    time.sleep(0.1) # this often screen refresh
     # for seg in segments:
     #     seg.forward(20)
 
     snake.move()
-
 
 screen.exitonclick()
