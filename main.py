@@ -29,3 +29,5 @@ for _ in range(2):
 
 
 screen.exitonclick()
+
+# USE SOLVE.PY thats main.py with fixes

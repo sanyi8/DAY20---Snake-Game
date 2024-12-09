@@ -1,6 +1,6 @@
 from turtle import Screen, Turtle # import Screen and Turtle classes
-import time
 from snake import Snake
+import time
 
 screen = Screen()
 screen.setup(600, 600)  # use keyword arguments (width and height)
@@ -11,6 +11,13 @@ screen.tracer(0)
 # create new object
 # use Snake() class from another file
 snake = Snake() # store instance from Class()
+
+# control setup
+screen.listen()     # listen to screen
+screen.onkey(snake.up, "Up")    # call method when key pressed
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
 
 game_is_on = True
 while game_is_on:
