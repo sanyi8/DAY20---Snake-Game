@@ -4,10 +4,19 @@ class Animal:
     def breathe(self):
         print("Inhale, exhale.")
 
-class Fish:
+class Fish(Animal):
+    def __init__(self):
+        super().__init__()
+
+    def breathe(self):
+        super().breathe()
+        print("doing this underwater")
+
     def swim(self):
         print("moving in water.")
 
 
-nemo = Fish()
+nemo = Fish()       # now object created from super class which has all attributes and methods than we create specific way
 nemo.swim()
+nemo.breathe()
+print(nemo.num_eyes)

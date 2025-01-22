@@ -1,5 +1,6 @@
-from turtle import Screen, Turtle # import Screen and Turtle classes
+from turtle import Screen#, Turtle # import Screen and Turtle classes
 from snake import Snake
+from food import Food
 import time
 
 screen = Screen()
@@ -11,6 +12,7 @@ screen.tracer(0)
 # create new object
 # use Snake() class from another file
 snake = Snake() # store instance from Class()
+food = Food()   # get food data from food.py
 
 # control setup
 screen.listen()     # listen to screen
@@ -27,5 +29,10 @@ while game_is_on:
     #     seg.forward(20)
 
     snake.move()
+
+    # detect collision with food
+    if snake.head.distance(food) < 15:
+        # print("nom nom nom") # instead of print we add a body
+        food.refresh()
 
 screen.exitonclick()
