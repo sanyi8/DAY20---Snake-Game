@@ -4,7 +4,7 @@ from turtle import Turtle   # inherit from turtle
 
 # remove hard coded pieces from body with constants
 ALIGNMENT = "center"
-FONT = ("Helvetica", 18, "normal")
+FONT = ("Helvetica", 18, "bold")
 
 
 class Scoreboard(Turtle):
@@ -19,6 +19,10 @@ class Scoreboard(Turtle):
 
     def update_scoreboard(self):
         self.write(f"Score : {self.score}", align=ALIGNMENT, font=FONT)
+
+    def game_over(self):
+        self.goto(0,0)
+        self.write("GAME OVER.", align=ALIGNMENT, font=FONT)
 
     def increase_score(self):
         self.score += 1
